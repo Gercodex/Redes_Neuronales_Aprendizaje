@@ -1,0 +1,245 @@
+/* MIT License
+
+Copyright (c) 2024 Gercodex (Gerardo G.R.)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.  */
+
+/* @uthor: Gercodex ©  */
+
+body{
+	background: black;
+	color: ghostwhite;
+	padding: 0;
+	margin: 0;
+	font-family: 'Courier New', Courier, monospace;
+}
+.contenedor_a{	
+	display: inline-block;
+	/* background: rgb(23, 65, 23); */
+	width: 33.33%;
+	height: 100vh;
+	overflow: scroll;
+}
+.contenedor_b{
+	display: inline-block;
+	/* background: rgb(41, 35, 80); */
+	width: 33.33%;
+	height: 100vh;
+	overflow: scroll;
+	padding-top: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+	box-sizing: border-box;
+}
+.contenedor_c{
+	display: inline-block;
+	/* background: rgb(2, 2, 80); */
+	width: 33.33%;
+	height: 100vh;
+	overflow: scroll;
+}
+.c_opciones{
+	display: block;
+	/* background-color: lightblue; */
+	width: 100%;
+	height: 10%;	
+	padding-top: 30px;
+}
+.b_lienzo{
+	display: inline-block;
+	width: 50%;
+}
+.b_numero{
+	display: inline-block;
+	width: 50%;
+}
+.l_dimensiones{
+	display: none;	
+	width: 100%;
+	height: fit-content;
+	/* background: lightblue; */
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.l_dimensiones button, .l_dimensiones input, .l_dimensiones label{	
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	font-family: inherit;
+}
+
+.l_dib button, .nodos button{
+	display: inline-block;
+	width: 50%;	
+}
+
+.c_dibujo{
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 13%;
+	padding-bottom: 13%;	
+}
+canvas{
+	border: 1px solid ghostwhite;
+}
+
+.l_dib{
+	/* visibility: hidden; */
+	display: none;
+}
+.b_l_dib #testnc{
+	display: none;
+	background: darkmagenta;
+	color: ghostwhite;
+}
+.respuesta{	
+	display: none;
+	margin-top: 20px;
+	padding: 15px;	
+}
+#agregarnn,#nnfwd{	
+	margin-top: 40px;
+	width: 100%;
+}
+#agregarnn{
+	background: darkmagenta;
+	color: ghostwhite;
+}
+#borrar{
+	background: darkslategrey;
+	color: ghostwhite;
+}
+.l_dibb{
+	display: none;
+}
+.nodos{
+	display: none;		
+}
+.b_nodos{
+	margin-bottom: 30px;	
+}
+.r_config{	
+	padding-top: 50px;
+	margin-bottom: 100px;	
+}
+.nodos #rlv, .nodos #lps{
+	display: inline-block;
+	width: 50%;
+	padding: 0;
+	border: 0;
+}
+#crear{
+	background: darkmagenta;
+	color: ghostwhite;
+}
+.areatexto{
+	width: 100%;
+	height: 100%;
+	background: black;
+	color: ghostwhite;
+	border: 0;
+}
+#nnfwd{
+	background: darkmagenta;
+	color: ghostwhite;
+}
+.a_dbtn{
+	width: 100%;
+	margin-bottom: 30px;
+	
+}
+#sopboxa{
+	margin-top: 20px;
+	display: none;
+	/* background: lightblue; */
+}
+#tabla{
+	display:inline;
+	margin-left:39px;
+}
+#tablas{
+	display:inline;
+	margin-left:10px;	
+}
+#tablase{
+	display:inline;
+	margin-left:95px;	
+}
+#colecciondatos #d_datos{
+	display: none;
+	width: 100%;
+	height: 100vw;
+	background: black;
+	color: ghostwhite;	
+}
+.e_datos{
+	display: none;
+	background: darkmagenta;
+	color: ghostwhite;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+button{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background: #551faa;
+	border-radius: 9px;
+	padding-left: 15px;
+	padding-right: 15px;
+	color: white;
+	box-shadow: 5px 3px 17px #08f7fe;
+}
+
+@keyframes nneono{
+	from {box-shadow: 5px 3px 17px  #08f7fe;}
+	to {box-shadow: 5px 3px 17px  #c2ff05;}
+	from {border-color: #08f7fe;}
+	to {border-color: #c2ff05;}
+}
+
+button:hover{
+	animation-name: nneono;
+	animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes nneon{
+	from {border-color: #8e00fe;}
+	to {border-color: #01ffff;}
+}
+
+img{
+	animation-name: nneon;
+	animation-duration: 3s;
+}
+
+input{
+	text-align: right;
+	background: darkblue;
+	color: ghostwhite;
+	border: 0;
+}
+textarea{
+	border: 0;
+}

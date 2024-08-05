@@ -1,0 +1,112 @@
+<!-- ******************************************************************************* -->
+<!-- 
+MIT License
+
+Copyright (c) 2024 Gercodex (Gerardo G.R.)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 
+-->
+<!-- *********************************************************************************** -->
+
+
+
+<!--  ***************Notas*************************************************
+se debe seleccionar el número 0 si es que se agrega de lo contrario dara nan.
+al parecer funciona bien para números con baja resolución, con resolucion más alta
+es posible que requiera un ajuste personalizado en tiempo de ejecución (no implementado).
+Realiza con exito el aprendizaje de los estados de entrada con los de salida utilizando
+datos pequeños.
+
+Se agregó la funcionalidad para poder ingresar individualmente los datos de entrada
+así como los resultados de salida esperados. Es útil para comprobar el funcionamiento
+de la red neuronal diseñada.
+Nota: Se requiere refactorización.
+La versión es relativamente funcional, sin embargo se requieren eliminar errores
+y mover determinadas validaciones a una función en común y agregar otras, etc.
+-->
+<!-- @uthor: Gercodex © -->	
+
+<!DOCTYPE html> 
+<html lang="es">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Rnn_Builder-Trainer</title>
+		<link rel="stylesheet" href="uis.css">		
+		<link rel="icon" href="icononn.png" >
+	</head>
+	<body><div 
+		class="contenedor_a"><div class="c_opciones" id="c_opciones"><button 
+				class="b_lienzo" id="conimagen" onclick="vlienzo()">Lienzo</button><button
+				class="b_numero" id="condatos" onclick="vdatos()">Datos</button>
+			</div>
+			<div class="l_dimensiones" id="l_dimensiones">
+				<label>Ancho</label>
+				<input id="ancho" type="number">
+				<label>Alto</label >
+				<input id="alto"/ type="number">
+				<label>Nodos de salida</label>
+				<input id="n_s"/ type="number"><br><br>
+				<button id="crear">Crear lienzo</button>				
+			</div>
+			<div class="l_dib" id="l_dib">				
+				<div class="c_dibujo" id="dibujo" ></div><div class="b_l_dib" id="b_l_dib">
+					<button id="borrar" onclick="borrard()" >Borrar lienzo</button><button	
+					id="primg" onclick="aurl()" >Agregar muestra</button><button 
+					id="testnc" onclick="testNN()">Determina el número:</button>
+				</div>				
+			</div>
+			<div class="l_dibb" id="l_dibb">
+				<button id="agregarnn" onclick="addNN()">Muestras ok</button>
+			</div>			
+			<div class="respuesta" id="respuesta"></div>			
+			<div class="nodos" id="nodos">								
+				<div class="b_nodos" id="b_nodos"><div class="r_config" id="r_config">
+						<button id="chrl" onclick="actualizarl()" autocomplete="off" >RL</button><input id="rlv">						
+						<button id="chlp" onclick="actualizarlp()" autocomplete="off" >Iteraciones</button><input id="lps">
+					</div>										
+					<button	id="borrLayer" onclick="borrarCapa()"> - capa</button><button 
+					id="agreLayer" onclick="addLayer()"> + capa</button>					
+					<button id="nnfwd" onclick="iniciarn()">Entrenar Red Neuronal</button><br>
+				</div>			
+			</div><br>
+			<div id="sopboxa">
+
+				<button class="a_dbtn" id="a_dbtn" onclick="dcol()">Agregar datos</button><br>				
+				<button class="e_datos" id="e_datos" onclick="edatos()">calcular salida</button>
+				<div id="a_tdbtn">					
+					<button onclick="borrarc('tabla')">-</button>
+					<button onclick="acampo('tabla')">+ entrada</button>
+					<button onclick="borrarc('tablase')">-</button>		
+					<button onclick="acampo('tablase')">+ salida</button>		
+				</div>			
+				<div id="sut">
+					<table id="tabla" ></table>
+					<table id="tablas" ></table>
+					<table id="tablase" ></table>
+				</div>				
+			</div>
+			</div><div
+			class="contenedor_b"><div class="l_dibujo">			
+			<div id="coleccionimg"></div>
+			<div id="colecciondatos"><textarea name="d_datos" id="d_datos" autocomplete="off"></textarea></div>	
+		</div></div><div
+		class="contenedor_c"><textarea type="textContent" class="areatexto" name="areatexto" id="atx"  autocomplete="off"></textarea></div>
+		<script src="ml.js"></script>
+	</body>
+</html>
