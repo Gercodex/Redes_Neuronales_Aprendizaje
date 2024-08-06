@@ -66,6 +66,8 @@ Los elementos de la izquierda representan los nodos de entrada y los de la derec
 Es una aplicación de prueba para aprender sobre redes neuronales y apredizaje, por lo que es posible que contenga errores, y en algunos casos el navegador no responda,
 usar con precaución.
 
+Navegador: Firefox.
+
 
 ## Fuentes:
 
