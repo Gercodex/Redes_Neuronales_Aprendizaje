@@ -82,6 +82,10 @@ Dot CSV: APRENDE Qué son las redes neuronales?...,...
 
 https://www.linkedin.com/in/gerardo-gutierrez-rodriguez-37629a196/
 
+## Sitio de la aplicación:
+
+https://gercodex.github.io/Redes_Neuronales_Aprendizaje/
+
 
 
 
